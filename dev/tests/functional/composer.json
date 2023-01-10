@@ -2,7 +2,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/magento/mtf.git"
+            "url": "https://github.com/openmage/mtf.git"
         },
         {
             "type": "vcs",

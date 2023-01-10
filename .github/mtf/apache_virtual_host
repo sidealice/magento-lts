@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    DocumentRoot $GITHUB_WORKSPACE
+    ServerName $MAGENTO_HOST_NAME
+    DirectoryIndex /index.php index.php
+    ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/$1
+
+    <Directory "$GITHUB_WORKSPACE">
+        Options FollowSymLinks MultiViews ExecCGI
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+</VirtualHost>
