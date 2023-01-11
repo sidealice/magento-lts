@@ -27,7 +27,7 @@ jobs:
           --health-retries=3
       selenium:
         image: selenium/standalone-firefox
-        # options: --health-cmd "curl http://selenium:4444" --health-interval=5s
+        # options: --health-cmd "curl http://localhost:4444" --health-interval=5s
         ports:
           - 4444:4444
 
@@ -130,17 +130,17 @@ jobs:
         env:
           SELENIUM_PORT: ${{ job.services.selenium.ports[4444] }}
         run: |
-          curl --no-progress-meter http://localhost:$SELENIUM_PORT/wd/hub
-          curl --no-progress-meter http://selenium:$SELENIUM_PORT/wd/hub
-          curl --no-progress-meter http://127.0.0.1:4444/wd/hub
-          curl --no-progress-meter http://localhost:4444/wd/hub
-          curl --no-progress-meter http://selenium:4444/wd/hub
+          curl --no-progress-meter http://localhost:$SELENIUM_PORT/wd/hub/status
 
       - name: Run Magento Test Framework test suite
-        uses: GabrielBB/xvfb-action@v1
-        with:
-          run: vendor/phpunit/phpunit/phpunit
-          working-directory: ./dev/tests/functional
+        working-directory: ./dev/tests/functional
+        run: vendor/phpunit/phpunit/phpunit
+
+#      - name: Run Magento Test Framework test suite
+#        uses: GabrielBB/xvfb-action@v1
+#        with:
+#          run: vendor/phpunit/phpunit/phpunit
+#          working-directory: ./dev/tests/functional
 
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action@v1.40
