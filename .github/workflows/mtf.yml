@@ -26,7 +26,7 @@ jobs:
           --health-timeout=5s
           --health-retries=3
       selenium:
-        image: selenium/standalone-chrome
+        image: selenium/standalone-firefox
         # options: --health-cmd "curl http://selenium:4444" --health-interval=5s
         ports:
           - 4444:4444
@@ -91,7 +91,7 @@ jobs:
       - name: Substitute vars for web server
         uses: dominicwatson/github-action-envsubst@v1
         with:
-          files: .github/mtf/apache_virtual_host .github/mtf/www.conf
+          files: .github/mtf/apache_virtual_host .github/mtf/www.conf dev/tests/functional/etc/config.xml
           patterns: $GITHUB_WORKSPACE $MAGENTO_HOST_NAME $PHP_VERSION
 
       - name: Start PHP-FPM
@@ -127,10 +127,14 @@ jobs:
           #php -f mtf troubleshooting:check-all
 
       - name: Check Selenium server
+        env:
+          SELENIUM_PORT: ${{ job.services.selenium.ports[4444] }}
         run: |
-          curl --no-progress-meter http://selenium:4444/wd/hub
-          curl --no-progress-meter http://localhost:4444/wd/hub
+          curl --no-progress-meter http://localhost:$SELENIUM_PORT/wd/hub
+          curl --no-progress-meter http://selenium:$SELENIUM_PORT/wd/hub
           curl --no-progress-meter http://127.0.0.1:4444/wd/hub
+          curl --no-progress-meter http://localhost:4444/wd/hub
+          curl --no-progress-meter http://selenium:4444/wd/hub
 
       - name: Run Magento Test Framework test suite
         uses: GabrielBB/xvfb-action@v1
