@@ -31,7 +31,7 @@
         <user>openmage</user>
         <password>openmage</password>
         <dbName>openmage</dbName>
-        <baseUrl>http://localhost/</baseUrl>
+        <baseUrl>http://127.0.0.1/</baseUrl>
         <backendName>admin</backendName>
     </install>
     <isolation>
