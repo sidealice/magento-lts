@@ -131,11 +131,6 @@ parameters:
 			path: app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit.php
 
 		-
-			message: "#^Method Mage_Adminhtml_Block_Catalog_Product_Edit_Action_Attribute\\:\\:_getHelper\\(\\) should return Mage_Adminhtml_Helper_Catalog_Product_Edit_Action_Attribute but returns Mage_Core_Helper_Abstract\\.$#"
-			count: 1
-			path: app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Action/Attribute.php
-
-		-
 			message: "#^If condition is always true\\.$#"
 			count: 1
 			path: app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Js.php
@@ -1136,11 +1131,6 @@ parameters:
 			path: app/code/core/Mage/Api/Model/Wsdl/Config/Element.php
 
 		-
-			message: "#^Return type \\(array\\) of method Mage_Api_Model_Wsdl_Config_Element\\:\\:getChildren\\(\\) should be compatible with return type \\(RecursiveIterator\\|null\\) of method RecursiveIterator\\<string,static\\(SimpleXMLElement\\)\\>\\:\\:getChildren\\(\\)$#"
-			count: 1
-			path: app/code/core/Mage/Api/Model/Wsdl/Config/Element.php
-
-		-
 			message: "#^Property Mage_Api2_Block_Adminhtml_Attribute_Tab_Resource\\:\\:\\$_treeModel \\(Mage_Api2_Model_Acl_Global_Rule_Tree\\) does not accept default value of type false\\.$#"
 			count: 1
 			path: app/code/core/Mage/Api2/Block/Adminhtml/Attribute/Tab/Resource.php
@@ -1726,11 +1716,6 @@ parameters:
 			path: app/code/core/Mage/Catalog/Block/Product/View/Type/Configurable.php
 
 		-
-			message: "#^Method Mage_Catalog_Block_Product_View_Type_Configurable\\:\\:_getHelper\\(\\) should return Mage_Catalog_Helper_Product_Type_Composite but returns Mage_Core_Helper_Abstract\\.$#"
-			count: 1
-			path: app/code/core/Mage/Catalog/Block/Product/View/Type/Configurable.php
-
-		-
 			message: "#^Property Mage_Catalog_Block_Product_Widget_Html_Pager\\:\\:\\$_lastPage \\(int\\) does not accept float\\.$#"
 			count: 1
 			path: app/code/core/Mage/Catalog/Block/Product/Widget/Html/Pager.php
@@ -2066,36 +2051,6 @@ parameters:
 			path: app/code/core/Mage/Catalog/Model/Product/Api.php
 
 		-
-			message: "#^Cannot access property \\$additional_attributes on array\\.$#"
-			count: 5
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
-			message: "#^Cannot access property \\$categories on array\\.$#"
-			count: 2
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
-			message: "#^Cannot access property \\$stock_data on array\\.$#"
-			count: 1
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
-			message: "#^Cannot access property \\$tier_price on array\\.$#"
-			count: 1
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
-			message: "#^Cannot access property \\$website_ids on array\\.$#"
-			count: 2
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
-			message: "#^Cannot access property \\$websites on array\\.$#"
-			count: 3
-			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
-
-		-
 			message: "#^Parameter \\#3 \\$attributes \\(stdClass\\) of method Mage_Catalog_Model_Product_Api_V2\\:\\:info\\(\\) should be compatible with parameter \\$attributes \\(array\\) of method Mage_Catalog_Model_Product_Api\\:\\:info\\(\\)$#"
 			count: 1
 			path: app/code/core/Mage/Catalog/Model/Product/Api/V2.php
@@ -2121,6 +2076,16 @@ parameters:
 			path: app/code/core/Mage/Catalog/Model/Product/Attribute/Tierprice/Api.php
 
 		-
+			message: "#^Access to an undefined property object\\:\\:\\$customer_group_id\\.$#"
+			count: 1
+			path: app/code/core/Mage/Catalog/Model/Product/Attribute/Tierprice/Api/V2.php
+
+		-
+			message: "#^Access to an undefined property object\\:\\:\\$website\\.$#"
+			count: 1
+			path: app/code/core/Mage/Catalog/Model/Product/Attribute/Tierprice/Api/V2.php
+
+		-
 			message: "#^Method Mage_Catalog_Model_Resource_Product_Compare_Item\\:\\:clean\\(\\) invoked with 1 parameter, 0 required\\.$#"
 			count: 1
 			path: app/code/core/Mage/Catalog/Model/Product/Compare/Item.php
@@ -2129,11 +2094,6 @@ parameters:
 			message: "#^Call to an undefined method Mage_Catalog_Model_Resource_Product_Flat_Indexer\\:\\:prepareFlatTables\\(\\)\\.$#"
 			count: 1
 			path: app/code/core/Mage/Catalog/Model/Product/Flat/Indexer.php
-
-		-
-			message: "#^Binary operation \"\\*\" between string and 1024 results in an error\\.$#"
-			count: 3
-			path: app/code/core/Mage/Catalog/Model/Product/Image.php
 
 		-
 			message: "#^Negated boolean expression is always false\\.$#"
@@ -2394,11 +2354,6 @@ parameters:
 			message: "#^Method Mage_Catalog_Model_Resource_Product_Attribute_Backend_Media\\:\\:insertGallery\\(\\) should return int but returns string\\.$#"
 			count: 1
 			path: app/code/core/Mage/Catalog/Model/Resource/Product/Attribute/Backend/Media.php
-
-		-
-			message: "#^Call to an undefined method Varien_Object\\:\\:formatUrlKey\\(\\)\\.$#"
-			count: 1
-			path: app/code/core/Mage/Catalog/Model/Resource/Product/Attribute/Backend/Urlkey.php
 
 		-
 			message: "#^Method Mage_Catalog_Model_Url\\:\\:refreshProductRewrites\\(\\) invoked with 3 parameters, 1 required\\.$#"
@@ -3146,16 +3101,6 @@ parameters:
 			path: app/code/core/Mage/Core/Controller/Request/Http.php
 
 		-
-			message: "#^Result of && is always false\\.$#"
-			count: 1
-			path: app/code/core/Mage/Core/Controller/Request/Http.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 1
-			path: app/code/core/Mage/Core/Controller/Request/Http.php
-
-		-
 			message: "#^Strict comparison using \\=\\=\\= between string and null will always evaluate to false\\.$#"
 			count: 2
 			path: app/code/core/Mage/Core/Controller/Request/Http.php
@@ -3651,7 +3596,7 @@ parameters:
 			path: app/code/core/Mage/Core/Model/Resource/Setup.php
 
 		-
-			message: "#^Binary operation \"\\.\" between string and array results in an error\\.$#"
+			message: "#^Binary operation \"\\.\" between \\(string\\|false\\) and array results in an error\\.$#"
 			count: 1
 			path: app/code/core/Mage/Core/Model/Resource/Setup/Query/Modifier.php
 
@@ -5071,16 +5016,6 @@ parameters:
 			path: app/code/core/Mage/Log/Model/Resource/Log.php
 
 		-
-			message: "#^Method Mage_Media_Model_File_Image\\:\\:getImage\\(\\) should return bool\\|resource but returns GdImage\\.$#"
-			count: 1
-			path: app/code/core/Mage/Media/Model/File/Image.php
-
-		-
-			message: "#^Method Mage_Media_Model_File_Image\\:\\:getTmpImage\\(\\) should return resource but returns GdImage\\|false\\.$#"
-			count: 1
-			path: app/code/core/Mage/Media/Model/File/Image.php
-
-		-
 			message: "#^Left side of && is always true\\.$#"
 			count: 1
 			path: app/code/core/Mage/Newsletter/Model/Resource/Template.php
@@ -5201,7 +5136,7 @@ parameters:
 			path: app/code/core/Mage/Payment/Model/Method/Abstract.php
 
 		-
-			message: "#^Binary operation \"\\*\\=\" between string and 2 results in an error\\.$#"
+			message: "#^Binary operation \"\\-\" between string and int\\<\\-9, 9\\> results in an error\\.$#"
 			count: 1
 			path: app/code/core/Mage/Payment/Model/Method/Cc.php
 
@@ -6776,11 +6711,6 @@ parameters:
 			path: app/code/core/Mage/Shipping/Model/Tracking/Result.php
 
 		-
-			message: "#^Call to an undefined method Zend_Db_Adapter_Abstract\\:\\:getCheckSql\\(\\)\\.$#"
-			count: 1
-			path: app/code/core/Mage/Sitemap/Model/Resource/Catalog/Abstract.php
-
-		-
 			message: "#^Method Mage_Tag_Model_Resource_Tag_Collection\\:\\:addPopularity\\(\\) invoked with 2 parameters, 0\\-1 required\\.$#"
 			count: 1
 			path: app/code/core/Mage/Tag/Block/Customer/Tags.php
@@ -6904,26 +6834,6 @@ parameters:
 			message: "#^Return type \\(\\$this\\(Mage_Tax_Model_Sales_Total_Quote_Tax\\)\\) of method Mage_Tax_Model_Sales_Total_Quote_Tax\\:\\:fetch\\(\\) should be compatible with return type \\(array\\) of method Mage_Sales_Model_Quote_Address_Total_Abstract\\:\\:fetch\\(\\)$#"
 			count: 1
 			path: app/code/core/Mage/Tax/Model/Sales/Total/Quote/Tax.php
-
-		-
-			message: "#^Binary operation \"\\*\" between string and 1024 results in an error\\.$#"
-			count: 1
-			path: app/code/core/Mage/Uploader/Helper/File.php
-
-		-
-			message: "#^Binary operation \"\\*\" between string and 1048576 results in an error\\.$#"
-			count: 1
-			path: app/code/core/Mage/Uploader/Helper/File.php
-
-		-
-			message: "#^Binary operation \"\\*\" between string and 1073741824 results in an error\\.$#"
-			count: 1
-			path: app/code/core/Mage/Uploader/Helper/File.php
-
-		-
-			message: "#^Binary operation \"\\*\" between string and 1099511627776 results in an error\\.$#"
-			count: 1
-			path: app/code/core/Mage/Uploader/Helper/File.php
 
 		-
 			message: "#^Property Mage_Shipping_Model_Carrier_Abstract\\:\\:\\$_code \\(string\\) on left side of \\?\\? is not nullable\\.$#"
@@ -7251,11 +7161,6 @@ parameters:
 			path: app/code/core/Mage/Widget/Block/Adminhtml/Widget/Options.php
 
 		-
-			message: "#^Comparison operation \"\\>\\=\" between int\\<0, max\\>\\|false and 0 is always true\\.$#"
-			count: 1
-			path: app/code/core/Mage/Widget/Model/Widget/Instance.php
-
-		-
 			message: "#^If condition is always true\\.$#"
 			count: 1
 			path: app/code/core/Mage/Wishlist/Block/Customer/Wishlist/Item/Column.php
@@ -7341,26 +7246,6 @@ parameters:
 			path: lib/Mage/Archive/Helper/File.php
 
 		-
-			message: "#^Method Mage_Backup_Filesystem\\:\\:create\\(\\) should return bool but return statement is missing\\.$#"
-			count: 1
-			path: lib/Mage/Backup/Filesystem.php
-
-		-
-			message: "#^Method Mage_Backup_Filesystem\\:\\:rollback\\(\\) should return bool but return statement is missing\\.$#"
-			count: 1
-			path: lib/Mage/Backup/Filesystem.php
-
-		-
-			message: "#^Call to an undefined method Mage_Backup_Interface\\:\\:getBackupFilename\\(\\)\\.$#"
-			count: 1
-			path: lib/Mage/Backup/Media.php
-
-		-
-			message: "#^Call to an undefined method Mage_Backup_Interface\\:\\:getBackupPath\\(\\)\\.$#"
-			count: 1
-			path: lib/Mage/Backup/Snapshot.php
-
-		-
 			message: "#^Negated boolean expression is always true\\.$#"
 			count: 1
 			path: lib/Mage/Cache/Backend/File.php
@@ -7378,6 +7263,11 @@ parameters:
 		-
 			message: "#^Negated boolean expression is always false\\.$#"
 			count: 2
+			path: lib/Mage/HTTP/Client/Curl.php
+
+		-
+			message: "#^Property Mage_HTTP_Client_Curl\\:\\:\\$_ch \\(object\\) does not accept resource\\.$#"
+			count: 1
 			path: lib/Mage/HTTP/Client/Curl.php
 
 		-
@@ -7751,8 +7641,23 @@ parameters:
 			path: lib/Varien/Filter/Template/Tokenizer/Variable.php
 
 		-
+			message: "#^Method Varien_Http_Adapter_Curl\\:\\:_getResource\\(\\) has invalid return type CurlHandle\\.$#"
+			count: 1
+			path: lib/Varien/Http/Adapter/Curl.php
+
+		-
+			message: "#^Property Varien_Http_Adapter_Curl\\:\\:\\$_resource has unknown class CurlHandle as its type\\.$#"
+			count: 1
+			path: lib/Varien/Http/Adapter/Curl.php
+
+		-
 			message: "#^Method Varien_Image_Adapter_Abstract\\:\\:backgroundColor\\(\\) should return array but empty return statement found\\.$#"
 			count: 2
+			path: lib/Varien/Image/Adapter/Abstract.php
+
+		-
+			message: "#^Property Varien_Image_Adapter_Abstract\\:\\:\\$_imageHandler has unknown class GdImage as its type\\.$#"
+			count: 1
 			path: lib/Varien/Image/Adapter/Abstract.php
 
 		-
@@ -7761,19 +7666,14 @@ parameters:
 			path: lib/Varien/Image/Adapter/Gd2.php
 
 		-
-			message: "#^Result of \\|\\| is always true\\.$#"
+			message: "#^Class GdImage not found\\.$#"
 			count: 1
 			path: lib/Varien/Image/Adapter/Gd2.php
 
 		-
-			message: "#^Offset 0 on array\\{\\} in isset\\(\\) does not exist\\.$#"
+			message: "#^Result of \\|\\| is always true\\.$#"
 			count: 1
-			path: lib/Varien/Io/Abstract.php
-
-		-
-			message: "#^Result of && is always false\\.$#"
-			count: 1
-			path: lib/Varien/Io/Abstract.php
+			path: lib/Varien/Image/Adapter/Gd2.php
 
 		-
 			message: "#^If condition is always true\\.$#"
@@ -7859,8 +7759,3 @@ parameters:
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
 			count: 1
 			path: lib/Varien/Simplexml/Config.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between '' and 'dump' will always evaluate to false\\.$#"
-			count: 1
-			path: shell/update-copyright.php

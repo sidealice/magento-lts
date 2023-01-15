@@ -2012,13 +2012,14 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
     }
 
     /**
-     * Retrieve text formatted price value including order rate
+     * Retrieve currency formatted string.
      *
-     * @param   float $price
-     * @return  string
+     * @param float|string $price Numeric value or field name, e.g. "grand_total".
+     * @return string
      */
     public function formatPriceTxt($price)
     {
+        $price = (float) (is_numeric($price) ? $price : $this->_getData($price));
         return $this->getOrderCurrency()->formatTxt($price);
     }
 
@@ -2353,6 +2354,11 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
         if (!$this->getId()) {
             $this->setData('protect_code', substr(md5(uniqid(mt_rand(), true) . ':' . microtime(true)), 5, 6));
         }
+
+        if ($this->getStatus() !== $this->getOrigData('status')) {
+            Mage::dispatchEvent('order_status_changed_before_save', ['order' => $this]);
+        }
+
         return $this;
     }
 
@@ -2376,7 +2382,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
                 if ($this->getState() !== self::STATE_COMPLETE) {
                     $this->_setState(self::STATE_COMPLETE, true, '', $userNotification);
                 }
-            } elseif (floatval($this->getTotalRefunded()) || (!$this->getTotalRefunded()
+            } elseif ((float) $this->getTotalRefunded() || (!$this->getTotalRefunded()
                 && $this->hasForcedCanCreditmemo())
                 /**
                  * Order can be closed just in case when we have refunded amount.
